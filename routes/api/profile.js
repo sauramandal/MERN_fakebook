@@ -44,6 +44,25 @@ router.post(
         if(!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
+        const {
+            company,
+            website,
+            location,
+            bio,
+            status,
+            githubstatus,
+            skills,
+            youtube,
+            facebook,
+            twitter,
+            instagram,
+            linkedin
+        } = req.body;
+
+        //Build profile object
+        const profileFields = {};
+        profileFields.user = req.user.id;
+        
 });
 
 module.exports = router; 
